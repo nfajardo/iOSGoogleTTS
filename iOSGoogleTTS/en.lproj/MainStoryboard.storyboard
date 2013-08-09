@@ -12,10 +12,11 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubs-on-EJT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubs-on-EJT">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="cKL-wQ-OyS"/>
+                                    <constraint firstAttribute="width" constant="288" id="x6m-gm-b3I"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Play">
@@ -29,7 +30,7 @@
                                     <action selector="play:" destination="2" eventType="touchUpInside" id="Ru2-RH-6v1"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Set some text" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WX1-G9-LDU">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Write some text here!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WX1-G9-LDU">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XgB-r0-x73"/>
                                 </constraints>
@@ -45,24 +46,44 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Choose Language" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqj-Xt-UXt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SwR-US-xBi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ubs-on-EJT" firstAttribute="top" secondItem="WX1-G9-LDU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8Wo-nI-D9S"/>
                             <constraint firstItem="WX1-G9-LDU" firstAttribute="top" secondItem="ZZ1-Ds-TbW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Nty-9f-GUj"/>
-                            <constraint firstItem="Ubs-on-EJT" firstAttribute="trailing" secondItem="WX1-G9-LDU" secondAttribute="trailing" type="default" id="WGf-cj-FAc"/>
+                            <constraint firstItem="Ubs-on-EJT" firstAttribute="top" secondItem="3" secondAttribute="top" constant="237" id="UTf-wD-1um"/>
+                            <constraint firstItem="yqj-Xt-UXt" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Yji-M8-jNS"/>
+                            <constraint firstAttribute="trailing" secondItem="Ubs-on-EJT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Z4M-ND-awa"/>
+                            <constraint firstItem="yqj-Xt-UXt" firstAttribute="top" secondItem="3" secondAttribute="top" constant="121" id="gOT-jJ-DK7"/>
+                            <constraint firstItem="WX1-G9-LDU" firstAttribute="trailing" secondItem="yqj-Xt-UXt" secondAttribute="trailing" type="default" id="ifW-Vh-N6o"/>
                             <constraint firstItem="ZZ1-Ds-TbW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="8" id="nTR-Sa-Yl5"/>
                             <constraint firstItem="ZZ1-Ds-TbW" firstAttribute="centerX" secondItem="WX1-G9-LDU" secondAttribute="centerX" type="default" id="nXp-kr-YWA"/>
                             <constraint firstAttribute="trailing" secondItem="ZZ1-Ds-TbW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pyB-dX-FeA"/>
-                            <constraint firstItem="Ubs-on-EJT" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sFE-4X-Fv5"/>
                             <constraint firstItem="WX1-G9-LDU" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yng-Vr-jdx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="_language_tf" destination="yqj-Xt-UXt" id="tGN-F0-I8d"/>
                         <outlet property="_texto" destination="WX1-G9-LDU" id="MA6-Gt-J4d"/>
+                        <outlet property="pickerView" destination="Mlk-qF-OQL" id="czq-SA-03A"/>
+                        <outlet property="playButton" destination="Ubs-on-EJT" id="jNT-uS-fZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" id="Mlk-qF-OQL">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <outlet property="dataSource" destination="2" id="OsS-w6-njg"/>
+                        <outlet property="delegate" destination="2" id="HbE-ua-bVM"/>
+                    </connections>
+                </pickerView>
             </objects>
         </scene>
     </scenes>
@@ -75,6 +96,8 @@
             <relationships>
                 <relationship kind="action" name="play:"/>
                 <relationship kind="outlet" name="_texto" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

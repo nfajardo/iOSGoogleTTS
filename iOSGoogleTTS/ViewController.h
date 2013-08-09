@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIPickerViewDelegate>
 {
-    AVPlayer *_player;
+    
     __weak IBOutlet UITextField *_texto;
+    __weak IBOutlet UITextField *_language_tf;
+    NSArray *languages_array;
+    
 }
-
+@property (nonatomic,weak) IBOutlet UIButton *playButton;
+@property(nonatomic,strong) IBOutlet UIPickerView *pickerView;
 @end
