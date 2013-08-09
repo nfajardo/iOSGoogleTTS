@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController
+{
+    AVPlayer *_player;
+    __weak IBOutlet UITextField *_texto;
+}
 
 @end

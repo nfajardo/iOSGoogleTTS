@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2B220617B4805E00A00E8F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2B220517B4805E00A00E8F /* AVFoundation.framework */; };
 		BBAB9D6D17B47E870010753E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB9D6C17B47E870010753E /* UIKit.framework */; };
 		BBAB9D6F17B47E870010753E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB9D6E17B47E870010753E /* Foundation.framework */; };
 		BBAB9D7117B47E870010753E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB9D7017B47E870010753E /* CoreGraphics.framework */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB2B220517B4805E00A00E8F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BBAB9D6917B47E870010753E /* iOSGoogleTTS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSGoogleTTS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBAB9D6C17B47E870010753E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BBAB9D6E17B47E870010753E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2B220617B4805E00A00E8F /* AVFoundation.framework in Frameworks */,
 				BBAB9D6D17B47E870010753E /* UIKit.framework in Frameworks */,
 				BBAB9D6F17B47E870010753E /* Foundation.framework in Frameworks */,
 				BBAB9D7117B47E870010753E /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +59,7 @@
 		BBAB9D6017B47E870010753E = {
 			isa = PBXGroup;
 			children = (
+				BB2B220517B4805E00A00E8F /* AVFoundation.framework */,
 				BBAB9D7217B47E870010753E /* iOSGoogleTTS */,
 				BBAB9D6B17B47E870010753E /* Frameworks */,
 				BBAB9D6A17B47E870010753E /* Products */,
@@ -298,6 +302,7 @@
 				BBAB9D8E17B47E870010753E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
